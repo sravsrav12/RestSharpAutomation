@@ -31,15 +31,9 @@ namespace RestSharpAutomation
                     restRequest.AddHeader(key, headers[key]);
                 }
             }
-            if (body != null)
-            {
-                restRequest.RequestFormat = dataFormat;
-                restRequest.AddBody(body);
-            }
             return restRequest;
         }
         //SendRequest -> Send the request using client and return the response
-        //Parameter is IrestRequest
         private IRestResponse SendRequest(IRestRequest restRequest)
         {
             IRestClient restClient = GetRestClient();
@@ -47,13 +41,13 @@ namespace RestSharpAutomation
             IRestResponse restResponse = restClient.Execute(restRequest);
             return restResponse;
         }
-        // SendRequest -> Send the request using client and return the response and desrialize
-        //tyoe argument must have publicc parameterless constructor
+        //SendRequest -> Send the request using client and return the response and deserialize
+        //type argument must have public parameterless constructor
         private IRestResponse<T> SendRequest<T>(IRestRequest restRequest)where T : new()
         {
             IRestClient restClient = GetRestClient();
             IRestResponse<T> restResponse = restClient.Execute<T>(restRequest);
-            //In case of XML following deserialization, for JSon Deserilization will happen automatically
+        //In case of XML following deserialization, for JSon Deserilization will happen automatically
             if (restResponse.ContentType.Equals("application/xml")) {
                 var deserializer = new RestSharp.Deserializers.DotNetXmlDeserializer();
                 restResponse.Data = deserializer.Deserialize<T>(restResponse);

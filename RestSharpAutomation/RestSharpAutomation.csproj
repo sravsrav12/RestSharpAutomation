@@ -75,26 +75,20 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ModelClass\Environment.cs" />
-    <Compile Include="ModelClassPract\JsonRootObject.cs" />
-    <Compile Include="ModelClassPract\Laptop.cs" />
-    <Compile Include="ModelClassPract\LaptopDetails.cs" />
-    <Compile Include="ModelClassPract\Location.cs" />
     <Compile Include="ModelClass\Account.cs" />
     <Compile Include="ModelClass\Balance.cs" />
     <Compile Include="ModelClass\Balance2.cs" />
     <Compile Include="ModelClass\Balances.cs" />
-    <Compile Include="ModelClass\Core.cs" />
+    <Compile Include="ModelClass\Environment.cs" />
     <Compile Include="ModelClass\Financials.cs" />
-    <Compile Include="ModelClass\PointBalance.cs" />
     <Compile Include="ModelClass\Root.cs" />
+    <Compile Include="ModelClass\RootModelClass.cs" />
     <Compile Include="ModelClass\Tokens.cs" />
     <Compile Include="ModelClass\Packet.cs" />
     <Compile Include="HelperClass\RestClientHelper.cs" />
     <Compile Include="ModelClass\JsonRoot.cs" />
     <Compile Include="Root.cs" />
     <Compile Include="UnitTest.cs" />
-    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

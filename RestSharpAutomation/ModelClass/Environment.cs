@@ -8,10 +8,10 @@ namespace RestSharpAutomation
 {
     public class Environment
     {
-         
+
         public int clientTypeId { get; set; }
         public string languageCode { get; set; }
-    
 
-}
+
+    }
 }
